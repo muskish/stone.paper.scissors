@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            spsDOM
+        </title>
+        <link rel="stylesheet" href="styles/auto_sps.css">
+    </head>
+
+    <body>
+        <p  class="gamename">STONE PAPER SCISSORS</p>
+        <button class="butt" onclick="
+            const yourMove='rock';
+            pickCompMov(yourMove);
+            ">
+            <img class="imag" src="rock.png">
+        </button>
+
+        <button class="butt" onclick="
+            const yourMove='paper';
+            pickCompMov(yourMove);
+            "><img class="imag" src="paper.png">
+        </button>
+
+        <button class="butt" onclick="
+            const yourMove='scissor';
+            pickCompMov(yourMove);
+        "><img class="imag" src="scissor.png"></button>
+        
+        <p class="jsscore"></p>
+        <p class="jsmoves"></p>
+        <p class="jsresult"></p>
+
+        <button class="res" onclick="
+            score.wins=0;
+            score.losses=0;
+            score.ties=0;
+            localStorage.removeItem('score');
+            updatescoreElement();
+            ">
+         Reset</button>
+         <button class="res" onclick="autoplay();">Auto-play</button>
+
+        <script src="scripts/auto_sps.js"></script>
+    </body>
+</html>
